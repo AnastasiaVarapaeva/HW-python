@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
-# Путь к chromedriver
+# Путь к chromedriver.
 service = Service(executable_path=r'C:\Users\Анастасия\Desktop/chromedriver.exe')
 
 # Запуск веб-драйвера

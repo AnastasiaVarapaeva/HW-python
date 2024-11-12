@@ -4,11 +4,10 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+from webdriver_manager.chrome import ChromeDriverManager  # Подключаем менеджер драйвера
 
-# Путь к chromedriver
-service = Service(executable_path=r'C:\Users\Анастасия\Desktop/chromedriver.exe')
-
-# Запуск веб-драйвера
+# Запуск Chrome-драйвера с использованием Service и ChromeDriverManager
+service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service)
 
 # Открыть сайт
@@ -26,12 +25,12 @@ search_button.click()
 
 # Проверяем, что кнопка переименовалась
 try:
-    WebDriverWait(driver, 10).until(
+    # Увеличиваем время ожидания до 15 секунд
+    WebDriverWait(driver, 15).until(
         EC.text_to_be_present_in_element((By.CSS_SELECTOR, '#updatingButton'), "SkyPro"))
     print("Кнопка была переименована успешно.")
 except TimeoutException:
     print("Кнопка не была переименована.")
-
 
 # Закрыть веб-драйвер
 driver.quit()

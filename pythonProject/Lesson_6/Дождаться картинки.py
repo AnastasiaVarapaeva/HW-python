@@ -11,7 +11,7 @@ service = Service(executable_path=r'C:\Users\Анастасия\Desktop/chromedr
 driver = webdriver.Chrome(service=service)
 
 try:
-    # Открыть сайт
+    # Открыть сайт.
     driver.get("https://bonigarcia.dev/selenium-webdriver-java/loading-images.html")
 
     # Ожидание, пока появится текст "Please wait until the images are loaded..."
