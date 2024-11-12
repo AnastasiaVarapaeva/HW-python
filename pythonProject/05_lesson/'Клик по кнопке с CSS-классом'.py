@@ -11,10 +11,10 @@ service = Service(executable_path=r'C:\Users\Анастасия\Desktop/chromedr
 # Запуск веб-дра��вера
 driver = webdriver.Chrome(service=service)
 
-# Шаг 1: Открытие страницы
+# Шаг 1.: Открытие страницы
 driver.get("http://uitestingplayground.com/classattr")
 
-# Шаг 2: Клик на синюю кнопку
+# Шаг 2.: Клик на синюю кнопку
 try:
     # Явное ожидание, чтобы убедиться, что кнопка доступна для клика
     button = WebDriverWait(driver, 20).until(

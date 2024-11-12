@@ -13,7 +13,7 @@ driver = webdriver.Chrome(service=service)
 # Открытие страницы
 driver.get("http://the-internet.herokuapp.com/add_remove_elements/")
 
-# Клик по кнопке "Add Element" 5 раз
+# Клик по кнопке "Add Element" 5 раз.
 add_button = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH, "//button[text()='Add Element']"))
 )

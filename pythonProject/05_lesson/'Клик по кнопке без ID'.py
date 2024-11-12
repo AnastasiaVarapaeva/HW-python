@@ -11,7 +11,7 @@ service = Service(executable_path=r'C:\Users\Анастасия\Desktop\chromedr
 # Запуск веб-драйвера
 driver = webdriver.Chrome(service=service)
 
-# Шаг 1: Открытие страницы
+# Шаг 1.: Открытие страницы
 driver.get("http://uitestingplayground.com/dynamicid")
 
 # Шаг 2: Клик на синюю кнопку
