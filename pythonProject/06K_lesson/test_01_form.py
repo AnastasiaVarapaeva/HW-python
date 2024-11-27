@@ -62,4 +62,4 @@ def test_form_submission(driver):
         elif "alert-success" in alert.get_attribute("class"):
             assert alert.is_displayed(), "Не все поля подсвечены зелёным."
 
-    print("Все проверки прошли успешно!")
+    print("Все проверки прошли успешно !")
